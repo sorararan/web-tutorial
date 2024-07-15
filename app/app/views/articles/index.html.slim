@@ -1,0 +1,16 @@
+h1 
+  | 記事一覧
+
+= flash[:success]
+= flash[:error]
+
+ul
+  - @articles.each do |article|
+    li  
+      = link_to article.title, article_path(article)
+      br
+      = link_to "[編集]", edit_article_path(article)
+      = button_to "[削除]", article_path(article), method: :delete
+
+p 
+  = link_to "新しい記事の追加", new_article_path

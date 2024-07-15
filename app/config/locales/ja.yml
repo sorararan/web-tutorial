@@ -1,0 +1,17 @@
+---
+ja:
+  activerecord:
+    models:
+      article: 記事
+    attributes:
+      article:
+        title: タイトル
+        body: 本文
+  errors:
+    messages:
+      blank: を入力してください
+  helpers:
+    submit:
+      create: 作成する
+      submit: 保存する
+      update: 更新する

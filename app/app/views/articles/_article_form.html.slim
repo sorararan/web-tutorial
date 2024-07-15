@@ -1,0 +1,18 @@
+= form_for @article do |f|
+  p
+    = f.label :title
+    br
+    = f.text_field :title
+    br
+    - if @article.errors.any?
+      = @article.errors.messages[:title][0]
+
+  p
+    = f.label :body
+    br
+    = f.text_field :body
+    - if @article.errors.any?
+      = @article.errors.messages[:body][0]
+
+  p  
+    = f.submit
